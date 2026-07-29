@@ -1,4 +1,4 @@
-name: First workflow
+name: Build and Deploy
 on: workflow_dispatch
 jobs:
   first-job:
@@ -12,3 +12,11 @@ jobs:
         run: |
             echo "First Echo"
             echo "Second Output"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy task
+        run: echo "Deployed success"
+      - name: Validation Step
+        run: "Validated successfully"
